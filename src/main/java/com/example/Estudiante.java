@@ -35,6 +35,8 @@ public class Estudiante {
         this.nombre = nombre;
     }
 
+    // Nota: En el setter de edad, validar que sea mayor o igual a 0
+
      public void setedad (int edad){
         if (edad >= 0){
             this.edad = edad;
@@ -45,15 +47,18 @@ public class Estudiante {
         
     }
 
+     // Nota: En el setter de promedio, validar que esté entre 0.0 y 10.0
     public void setpromedio (double promedio){
-        
-        this.promedio = promedio;
+        if (promedio>=0.0 && promedio <=10.0){
+            this.promedio=promedio;
+            else {
+                System.out.println(El promedio debe estar entre 0.0 y 10.0);
+
+            }
+        }
+
     }
 
-
-    // Nota: En el setter de edad, validar que sea mayor o igual a 0
-    // Nota: En el setter de promedio, validar que esté entre 0.0 y 10.0
-    
     // TODO: Crear método mostrarInformacion que imprima los datos del estudiante
     
    
