@@ -25,7 +25,7 @@ public class Estudiante {
         return edad;
     }
 
-    public int getpromedio (){
+    public double getpromedio (){
         return promedio;
     }
     
@@ -41,18 +41,18 @@ public class Estudiante {
         if (edad >= 0){
             this.edad = edad;
             else {
-                System.out.println(La edad no es correcta);
+                System.out.println("La edad no es correcta");
             }
         }
         
     }
 
      // Nota: En el setter de promedio, validar que esté entre 0.0 y 10.0
-    public void setpromedio (double promedio){
+    public void setPromedio (double promedio){
         if (promedio>=0.0 && promedio <=10.0){
             this.promedio=promedio;
             else {
-                System.out.println(El promedio debe estar entre 0.0 y 10.0);
+                System.out.println("El promedio debe estar entre 0.0 y 10.0");
 
             }
         }
@@ -61,5 +61,9 @@ public class Estudiante {
 
     // TODO: Crear método mostrarInformacion que imprima los datos del estudiante
     
-   
+   public void mostrarInformacion () {
+    System.out.println("Estudiante: " + nombre  + "Edad: " + edad + "Promedio: "  + promedio);
+
+    
+   }
 }
